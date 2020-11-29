@@ -27,7 +27,7 @@ const updateUserInfo = (user) => {
     b2.innerText = 'Manage Subscription';
     b2.addEventListener('click', () => {
     
-     fetch('/.netlify/functions/create-manage-link', {
+     fetch('../functions/create-manage-link', {
        method: 'POST',
        headers: {
          Authorization: `Bearer ${user.token.access_token}`,
