@@ -115,7 +115,7 @@ export default function Test() {
     const token = user ? await netlifyIdentity.currentUser().jwt(true) : false;
 
     ['free', 'pro', 'premium'].forEach((type) => {
-      fetch('/functions/get-protected-content', {
+      fetch('/.netlify/functions/get-protected-content', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
