@@ -27,8 +27,7 @@ const IMAGES =
 const content = {
   free: {
   
-    source: 
-      IMAGES.src,
+   
       src:
       'https://wwlibrary.org/contents/videos_screenshots/0/296/preview.jpg',
     alt: 'close-up of a corgi with its tongue hanging out',
