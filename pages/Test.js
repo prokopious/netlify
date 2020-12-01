@@ -163,7 +163,7 @@ export default function Test() {
 <template id="content">
   <figure class="content-display">
     <img />
-    <Gallery />
+    <Gallery photos={data.gal}/>
     <figcaption>
       <a class="credit"></a>
     </figcaption>
