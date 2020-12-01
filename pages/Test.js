@@ -1,58 +1,20 @@
 import Head from 'next/head';
 
+import Gallery from 'react-photo-gallery';
+
+
 export default function Test() {
 
+  
 
 
-        return (
 
-            <><Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-        <script
-   type="text/javascript"
-   src="https://identity.netlify.com/v1/netlify-identity-widget.js">
-
- </script>
-      </Head>
-            
-<h1>Sign Up for Premium Corgi Content</h1>
-
-<div class="user-info">
-  <button id="left">Log In</button>
-  <button id="right">Sign Up</button>
-</div>
-
-<div class="corgi-content">
-  <div class="content">
-    <h2>Free Content</h2>
-    <div class="free"></div>
-  </div>
-  <div class="content">
-    <h2>Pro Content</h2>
-    <div class="pro"></div>
-  </div>
-  <div class="content">
-    <h2>Premium Content</h2>
-    <div class="premium"></div>
-  </div>
-</div>
-
-<template id="content">
-  <figure class="content-display">
-    <img />
-    <figcaption>
-      <a class="credit"></a>
-    </figcaption>
-  </figure>
-</template></>
-
-        )
+  
 
         
 
 
-    }
+    
     if (process.browser) {
           const button1 = document.getElementById('left');
   const button2 = document.getElementById('right');
@@ -139,6 +101,9 @@ export default function Test() {
           img.src = data.src;
           img.alt = data.alt;
 
+          const gallery  = content.querySelector('Gallery');
+          gallery.gal = data.gal;
+
           const credit = content.querySelector('.credit');
           credit.href = data.creditLink;
           credit.innerText = `Credit: ${data.credit}`;
@@ -159,5 +124,52 @@ export default function Test() {
 
   netlifyIdentity.on('init', handleUserStateChange);
   netlifyIdentity.on('login', handleUserStateChange);
-  netlifyIdentity.on('logout', handleUserStateChange);
+  netlifyIdentity.on('logout', handleUserStateChange);}
+
+      return (
+
+            <><Head>
+        <title>Next.js Starter!</title>
+        <link rel="icon" href="/favicon.ico" />
+        <script
+   type="text/javascript"
+   src="https://identity.netlify.com/v1/netlify-identity-widget.js">
+
+ </script>
+      </Head>
+            
+<h1>Sign Up for Premium Corgi Content</h1>
+
+<div class="user-info">
+  <button id="left">Log In</button>
+  <button id="right">Sign Up</button>
+</div>
+
+<div class="corgi-content">
+  <div class="content">
+    <h2>Free Content</h2>
+    <div class="free"></div>
+  </div>
+  <div class="content">
+    <h2>Pro Content</h2>
+    <div class="pro"></div>
+  </div>
+  <div class="content">
+    <h2>Premium Content</h2>
+    <div class="premium"></div>
+  </div>
+</div>
+
+<template id="content">
+  <figure class="content-display">
+    <img />
+    <Gallery />
+    <figcaption>
+      <a class="credit"></a>
+    </figcaption>
+  </figure>
+</template></>
+
+        )
+
 }
