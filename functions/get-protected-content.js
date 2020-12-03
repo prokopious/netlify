@@ -4,18 +4,6 @@ const content = {
       'https://images.unsplash.com/photo-1550159930-40066082a4fc?auto=format&fit=crop&w=600&h=600&q=80',
     alt: 'corgi in the park with a sunset in the background',
     credit: 'Jacob Van Blarcom',
-    gal: [
-      {
-        src: 'http://example.com/example/img1.jpg',
-        width: 4,
-        height: 3
-      },
-      {
-        src: 'http://example.com/example/img2.jpg',
-        width: 1,
-        height: 1
-      }
-    ],
     creditLink: 'https://unsplash.com/photos/lkzjENdWgd8',
     message: 'To view this content, you need to create an account!',
     allowedRoles: ['free', 'pro', 'premium'],
