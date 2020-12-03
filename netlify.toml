@@ -3,10 +3,4 @@
   publish = "out"
   functions = "functions"
 
-  [[redirects]]
-  from = "/"
-  to = "/page3"
-  status = 301
-  force = false
-  query = {path = ":path"}
-  conditions = {Language = ["en"], Country = ["US"], Role = ["free"]}
+ 
